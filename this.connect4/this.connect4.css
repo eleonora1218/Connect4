@@ -1,0 +1,110 @@
+body {
+  margin-left: 20px;
+  margin-top: 20px;
+  border: 5px rgb(29, 68, 68) solid;
+  width: 390px;
+  background-color: honeydew;
+}
+
+h1 {
+  display: grid;
+  justify-content: center;
+  font-family: Mukta;
+  color: rgb(29, 68, 68);
+  margin: auto;
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  position: relative;
+  animation: fall 0.8s;
+  animation-timing-function: linear;
+}
+
+@keyframes fall {
+  0% {
+    top: -300px;
+  }
+
+  25% {
+    top: -200px;
+  }
+
+  50% {
+    top: -100px;
+  }
+
+  75% {
+    top: -50px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+
+#column-top td {
+  border: dashed 1px rgba(65, 150, 136, 0.905);
+  background-color: rgba(65, 150, 136, 0.166);
+}
+
+#column-top td:hover {
+  background-color: rgba(65, 150, 136, 0.905);
+  border-radius: 50%;
+  transform: scale(0.8);
+}
+
+.cellDesign {
+  width: 30px;
+  z-index: 1;
+  box-shadow: inset 0px 0px 20px 8px rgb(29, 68, 68);
+  background-color: rgba(65, 150, 136, 0.905);
+}
+
+#start-game {
+  background-color: rgba(65, 150, 136, 0.166);
+  padding: 1px 6px 1px 6px;
+  border-radius: 2px;
+  border: solid rgba(65, 150, 136, 0.905);
+  font-family: Mukta;
+  display: flex;
+  align-content: flex-end;
+  margin-left: 38%;
+  margin-bottom: 2px;
+}
+
+#p1-color {
+  background-color: rgba(65, 150, 136, 0.166);
+  padding: 1px 6px 1px 6px;
+  border-radius: 2px;
+  border: solid rgba(65, 150, 136, 0.905);
+  font-family: Mukta;
+  display: flex;
+  align-content: flex-end;
+  margin-left: 32%;
+  margin-bottom: 2px;
+}
+
+#p2-color {
+  background-color: rgba(65, 150, 136, 0.166);
+  padding: 1px 6px 1px 6px;
+  border-radius: 2px;
+  border: solid rgba(65, 150, 136, 0.905);
+  font-family: Mukta;
+  display: flex;
+  align-content: flex-end;
+  margin-left: 32%;
+  margin-bottom: 2px;
+}
